@@ -4,6 +4,15 @@
   margin: 0;
 }
 
+.hlist li {
+  float: left;
+  margin-left: 1em;
+}
+
+  .hlist li:first-child {
+    margin-left: 0;
+  }
+
 .vlist li {
   clear: both;
   list-style-type: none;

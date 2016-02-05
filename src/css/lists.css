@@ -1,0 +1,17 @@
+.hlist,
+.vlist {
+  list-style-type: none;
+  margin: 0;
+}
+
+.vlist li {
+  clear: both;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vlist a {
+  display: block;
+  padding: 0;
+}

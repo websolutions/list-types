@@ -1,26 +1,46 @@
-.hlist,
-.vlist {
+%unstyled-list {
   list-style-type: none;
-  margin: 0;
+  padding-left: 0;
 }
 
-.hlist li {
-  float: left;
-  margin-left: 1em;
+
+.vlist {
+  @extend %unstyled-list;
+
+  > * {
+    display: block;
+  }
 }
 
-  .hlist li:first-child {
-    margin-left: 0;
+.hlist {
+  @extend %unstyled-list;
+
+  @include horizontal;
+
+  > * {
+    float: left;
+  }
+}
+
+.inline-list {
+  display: block;
+  padding-left: 0;
+
+  li {
+    display: inline;
+    padding: 0 10px;
   }
 
-.vlist li {
-  clear: both;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  &-left, &-right {
+    @extend .inline-list;
+    text-align: right;
+  }
 }
 
-.vlist a {
-  display: block;
-  padding: 0;
+.inline-block-list {
+  @extend .inline-list;
+
+  li {
+    display: inline-block;
+  }
 }
